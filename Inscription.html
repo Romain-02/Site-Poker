@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="Inscription.css">
+</head>
+<body>
+    
+    <main>
+        <section id="form">
+            <h1> Formulaire d'inscription </h1>
+            <h2>Veuillez remplir les différents champs pour nous aider à améliorer votre expérience utilisateur</h2>
+            <form action="./PokerHomePage.html" method="get">
+                <div>
+                    <label for=""><u>Genre:</u></label>
+                    <section>
+                        <label for="">Homme</label>
+                        <input type="radio" required name="genre">
+                        <label for="">Femme</label>
+                        <input type="radio" required name="genre">
+                        <label for="">Autre</label>
+                        <input type="radio" required name="genre">
+                    </section>
+                </div>
+
+                <div>
+                    <label for=""><u>Variantes de jeu jouée:</u></label>
+                    <section>
+                        <label for="">Texas Hold’em Limit</label>
+                        <input type="checkbox" name="Texas Hold’em Limit">
+                        <label for="">Omaha</label>
+                        <input type="checkbox" name="Omaha"> <br>
+                        <label for="">Stud</label>
+                        <input type="checkbox" name="Stud">
+                        <label for="">Draw</label>
+                        <input type="checkbox" name="Draw">
+                    </section>
+                </div>
+
+                <div>
+                    <label for=""><u>Pseudo:</u></label>
+                    <section>
+                        <input type="text" placeholder="Entrer votre pseudo" required>
+                    </section>
+                </div>
+
+                <div>
+                    <label for=""><u>Mot de passe:</u></label>
+                    <section>
+                        <input type="password" placeholder="Entrer votre mot de passe" required>
+                    </section>
+                </div>
+
+                <div>
+                    <label for=""><u>Questions secrètes(pour retrouver votre mot de passe):</u></label>
+                    <select name="question">
+                        <option value="question">Quel est le nom de votre chien</option>
+                        <option value="question">Quel est le nom de jeune fille de votre mère</option>
+                        <option value="question">Quel est votre chiffre préféré</option>
+                        <option value="question">Quel est votre année de naissance</option>
+                    </select>
+                </div>
+                <div>
+                    <label for=""><u>Votre réponse:</u></label>
+                    <textarea name="question" placeholder="Entrer votre message" cols="20" rows="1" required></textarea>
+                </div>
+                <a class="button" href="./PokerHomePage.html"><strong>Annuler</strong></a>
+                <button class="button" value="submit"><strong>S'inscrire</strong></button>
+            </form>
+
+        </section>
+    </main>
+</body>
+</html>

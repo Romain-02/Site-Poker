@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="Formulaire.css">
+</head>
+<body>
+    
+    <main>
+        <section id="form">
+            <h1> Nous contacter </h1>
+            <h2>Ses informations nous aideront à améliorer l'expérience des utilisateurs, ainsi qu'à répondre à vos questions</h2>
+            <form action="./PokerHomePage.html" method="get">
+                <div>
+                    <label for="">Email</label>
+                    <section>
+                        <input type="email" placeholder="Entrer votre email" required>
+                        <span type="validity"></span>
+                    </section>
+                </div>
+
+                <div>
+                    <label for="">Nom</label>
+                    <section>
+                        <input type="text" placeholder="Entrer votre nom" required>
+                        <span type="validity"></span>
+                    </section>
+                </div>
+
+                <div>
+                    <label for="">Numéro de téléphone</label>
+                    <section>
+                        <input type="tel" placeholder="Entrer votre numéro de téléphone" required>
+                        <span type="validity"></span>
+                    </section>
+                </div>
+
+                <div>
+                    <label for="">Adresse</label>
+                    <section>
+                        <input type=" text" placeholder="Entrer votre adresse" required>
+                        <span type="validity"></span>
+                    </section>
+                </div>
+
+                <div>
+                    <label for="">Message</label>
+                    <textarea name="message" placeholder="Entrer votre message" cols="30" rows="10" required></textarea>
+                </div>
+                <a class="button" href="./PokerHomePage.html"><strong>Annuler</strong></a>
+                <button class="button" value="submit"><strong>Soumettre</strong></button>
+            </form>
+
+        </section>
+    </main>
+</body>
+</html>

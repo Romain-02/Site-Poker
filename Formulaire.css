@@ -1,0 +1,168 @@
+
+body{
+    background-image: url("./image/image.jpg");
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main{
+    margin-top: 0vh;
+}
+#form{
+    border-radius: 40px;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+    width: 60vw;
+    height: 70vh;
+    margin: 7% 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px 10;
+}
+
+form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+div{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+div:nth-child(5){
+    display: flex;
+    flex-direction: column;
+    width: 200%;
+}
+
+a{
+    display: flex;
+    grid-row:4;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+}
+
+button{
+    display: flex;
+    grid-row:4;
+    grid-column:2;
+}
+
+h1{
+    font-size: 2em;
+}
+
+h2{
+    color: rgb(64, 64, 64);
+    font-size: 1.2em;
+    margin: 1px;
+    padding-bottom: 10px;
+}
+
+#form section{
+    padding-right: 10px;
+}
+
+input:invalid + span:after{
+    position: absolute;
+    content: "X";
+    padding-left: 5px;
+    color: red;
+}
+
+input:valid + span:after{
+    position: absolute;
+    content: "✓";
+    padding-left: 5px;
+    color: green;
+}
+
+.button{
+    background-color: rgba(255, 0, 0, 0.327);
+    margin: 20px;
+    padding: 16px 45px;
+    border-radius: 30px;
+    font-size: 1em;
+    justify-content: center;
+    text-align: center;
+}
+
+.button:hover{
+    cursor: pointer;
+    color: white;
+    background-color: red;
+    transition: 0.2s;
+}
+
+textarea{
+    resize : none;
+}
+
+textarea, input{
+    border: 1px solid rgb(166, 166, 166);
+    border-radius: 2px;
+}
+
+@media screen and (max-height: 768px){
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    #form{
+        height: 100vh;
+    }
+    div:nth-child(2n){
+        margin-left: 0;
+    }
+    .button{
+        width: 40%;
+        padding: 15px 5px;
+        font-size: 10px;
+    }
+    #form h1{
+        font-size: 14px;
+    }
+
+    #form h2{
+        font-size: 8px;
+    }
+  }
+
+@media screen and (max-width: 1024px){
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #form{
+        height: 90vh;
+    }
+
+    div{
+        font-size: 11px;
+    }
+
+    div:nth-child(2n){
+        margin-left: 0;
+    }
+
+    select, textarea, input[type="text"], input[type="password"]{
+        height: 60%;
+    }
+
+    textarea{
+        width: 50%;
+    }
+
+    .button{
+        width: 40%;
+        padding: 2px 0;
+        font-size: 10px;
+    }
+}

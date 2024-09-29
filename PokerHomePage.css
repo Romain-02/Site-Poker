@@ -1,0 +1,715 @@
+@font-face {
+  font-family: pokerFont;
+  src: url(Poker.ttf);
+}
+
+body {
+  margin: 0%;
+}
+
+/* Barre de navigation */
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+.mega-menu {
+  border-radius: 20px;
+  height: 4vh;
+  z-index: 3;
+  border: 2.5px solid orange;
+  margin: 0;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+.mega-menu a {
+  display: block;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+.mega-menu a:hover {
+  background: orange;
+  border-radius: 20px;
+  transition: 0.3s;
+  width: max-content;
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.mega-menu-main {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.lvl-0 {
+  height: 4vh;
+  color: rgb(255, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.lvl-0 > a {
+  padding: 12px 25px;
+  font-size: 0.8em;
+}
+.lvl-0:hover > ul {
+  display: flex;
+  transition: 10s;
+}
+
+.mega-menu-tab {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background: rgba(252, 252, 252, 0.9);
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3px;
+}
+.lvl-1 {
+  flex: 1;
+  width: 50%;
+  margin: 0 15px;
+  font-size: 1em;
+}
+
+.lvl-1 h2 {
+  font-size: 3em;
+}
+
+.lvl-1 h2 {
+  margin: 0;
+  padding: 0;
+  color: rgb(0, 0, 0);
+}
+
+.lvl-2 {
+  padding-top: 15px;
+}
+.lvl-2 a {
+  padding: 8px 0;
+}
+
+/* Titre du site */
+main > section:first-of-type section h1 {
+  display: flex;
+  font-size: 50px;
+  color: black;
+  margin: 0;
+  z-index: 2; /* Positionner le h1 au-dessus de l'élément avec le filtre */
+  position: relative;
+  font-family: pokerFont;
+}
+
+/* Titre du site */
+main > section:first-of-type section div {
+  margin-top: -10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2.8vh;
+  color: black;
+  margin-left: 10vw;
+  z-index: 2; /* Positionner le div au-dessus de l'élément avec le filtre */
+  position: relative;
+}
+
+/* Titre du site */
+main > section:first-of-type section p {
+  display: flex;
+  font-size: 2.8vh;
+  color: black;
+  width: 70%;
+  z-index: 2; /* Positionner le p au-dessus de l'élément avec le filtre */
+}
+
+/*options de la barre de navigation*/
+main > section:first-child > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6vh;
+  background-color: rgb(25, 25, 25);
+  z-index: 3;
+}
+
+/* Section contenant l'image en parallax de la table de poker */
+main > section:first-child section {
+  display: flex;
+  justify-content: left;
+  margin: 0;
+  margin-top: 5vh;
+  height: 77vh;
+  background-image: url("./Image/tablePoker.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative; /* Ajout de la position relative pour utiliser z-index */
+}
+
+main > section:first-child section::before {
+  background: rgba(255, 0, 0, 0.25);
+  top: 0vh;
+  right: 0;
+  bottom: 0vh;
+  left: 0;
+  content: "";
+  position: absolute;
+  z-index: 1;
+}
+
+/* EL CHATA*/
+main > section:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  z-index: 0;
+  background-color: #2c3e50; /* Couleur de fond, ici un ton de gris-bleu */
+  color: #ecf0f1; /* Couleur du texte, ici blanc */
+  position: relative;
+  overflow: hidden;
+}
+
+main > section:nth-child(2) h2 {
+  color: black;
+  font-size: 30px;
+  margin-bottom: 0;
+  font-family: pokerFont;
+}
+
+h2 {
+  font-family: pokerFont;
+}
+
+.lvl-0 > a {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+main > section:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    -20deg,
+    #e74c3c,
+    #ffffff
+  ); /* Dégradé de couleurs */
+  opacity: 0.8;
+  z-index: -1;
+}
+
+main > section:nth-child(2) h1 {
+  font-size: 3em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombre du texte */
+}
+
+/* Style pour un ombrage subtil */
+main > section:nth-child(2) {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombrage subtil */
+}
+
+main > section:nth-child(2) a {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  text-align: center;
+  width: 22%;
+  height: 15vh;
+  margin: 5vh;
+  padding-top: 100px;
+  background: linear-gradient(
+    135deg,
+    #cc4040,
+    rgb(110, 97, 97)
+  ); /* Dégradé de couleurs */
+  overflow: hidden;
+  color: #ecf0f1; /* Couleur du texte, ici blanc */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre subtile */
+  transition: transform 0.3s ease-in-out; /* Animation de transition pour le survol */
+}
+
+main > section:nth-child(2) a img {
+  height: 120%; /* Ajustement de la largeur de l'image */
+  border-radius: 50%; /* Pour une forme plus arrondie */
+}
+
+main > section:nth-child(2) a img:last-of-type {
+  height: 140%; /* Ajustement de la largeur de l'image */
+  border-radius: 50%; /* Pour une forme plus arrondie */
+}
+
+main > section:nth-child(2) a:hover {
+  cursor: pointer;
+  transform: scale(1.1); /* Légèrement agrandi lors du survol */
+}
+
+main > section:nth-child(2) a {
+  font-size: 0.8em; /* Taille de police pour le paragraphe */
+  margin-top: 0;
+}
+
+/* Effet de transition pour le texte lors du survol */
+main > section:nth-child(2) a:hover h2,
+main > section:nth-child(2) a:hover p {
+  color: #ffffff; /* Changement de couleur du texte lors du survol */
+  transition: color 0.3s ease-in-out; /* Animation de transition pour la couleur du texte */
+}
+
+/* FIN de EL CHATA */
+
+/* deuxième section contenant les différentes actualités*/
+main > section:nth-child(2) section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 60%;
+  width: 100%;
+  margin: 10vh 6vw;
+  margin-top: 0vh;
+  background: transparent;
+}
+
+
+main > section:nth-child(2) > p {
+  margin-bottom: 0;
+}
+
+main section:nth-child(3) {
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(79, 79, 79));
+}
+
+/* division en deux parties de la troisième section*/
+main section:nth-child(3) > div {
+  display: flex;
+  height: 80%;
+  width: 95%;
+  overflow: visible;
+}
+
+main section:nth-child(3) {
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  background: linear-gradient(
+    to right,
+    #1a1a1a,
+    #4f4f4f
+  ); /* Dégradé de couleurs sombres */
+  color: #ffffff; /* Couleur du texte, ici blanc */
+}
+/* Division en deux parties de la troisième section */
+main section:nth-child(3) > div {
+  display: flex;
+  align-items: center;
+  height: 80%;
+  width: 95%;
+  overflow: visible;
+}
+
+/* Première division de la troisième section qui contient un texte */
+main > section:nth-child(3) > div > div:nth-child(1) {
+  width: 60%; /* Ajustement de la largeur */
+  padding: 20px; /* Ajout de rembourrage pour une meilleure lisibilité */
+}
+
+/* Style du texte */
+main > section:nth-child(3) > div > div:nth-child(1) p {
+  font-size: 1em; /* Taille de police augmentée */
+  line-height: 1.2; /* Espacement des lignes pour une meilleure lisibilité */
+}
+
+/* Ajout d'une bordure à la première division pour plus de contraste */
+main > section:nth-child(3) > div > div:nth-child(1) {
+  border-right: 2px solid #ffffff; /* Bordure à droite en blanc */
+}
+
+main > section:nth-child(3) > div > div:nth-child(1) h2 {
+  font-size: 1.6em;
+}
+
+/* Deuxième division de la troisième section qui contient une image */
+main section:nth-child(3) > div > div:nth-child(2) {
+  height: 100%; /* Ajustement de la hauteur */
+  width: 40%; /* Ajustement de la largeur */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ajustement de la position de l'image */
+main section:nth-child(3) > div > div:nth-child(2) img {
+  width: 80%;
+  z-index: 1;
+  margin-bottom: 5vh;
+}
+
+/* FIN DE LA TROISIEME SECTION*/
+main section:nth-child(4) h2 {
+  font-size: 30px;
+  position: absolute;
+  background-color: aliceblue;
+  border-radius: 10px;
+  margin-top: -50vh;
+}
+
+/* division de la quatrième section*/
+main section:nth-child(4) > section {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  /* background: linear-gradient(-20deg, #e74c3c, #ffffff); */
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+}
+#background-video {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  position: static;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+#logoInsta {
+  height: 10px;
+}
+
+/*couroussel de la 4ème section*/
+
+footer {
+  padding: 1vh 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(79, 79, 79));
+}
+
+footer section {
+  margin: 1vh 10vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer section div {
+  color: white;
+}
+
+footer section:nth-child(2) > p {
+  margin-top: 400px;
+}
+
+footer iframe {
+  height: 50%;
+  width: 100%;
+}
+
+footer p {
+  font-size: 0.7em;
+}
+
+footer p:first-of-type {
+  font-size: 1em;
+}
+
+footer > section > div > li > a > img {
+  width: 8%;
+}
+
+@media screen and (max-width: 800px) {
+  main > section:first-of-type section div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  main > section:first-of-type section h1 {
+    font-size: 35px;
+  }
+
+  main > section:first-of-type {
+    text-align: center;
+  }
+
+  main > section:first-of-type section p {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+  }
+  .mega-menu {
+    width: 60%;
+  }
+
+  .lvl-0 a {
+    margin: 5px;
+    font-size: 14px;
+  }
+  .lvl-0:hover {
+    width: 100%;
+  }
+  .lvl-1 {
+    margin: 5px;
+  }
+  main > section:nth-child(2) section a {
+    width: 15vw;
+    height: 10vh;
+    margin-right: 2vh;
+    margin-left: 2vh;
+    margin-top: 10vh;
+    font-size: 0.7em;
+  }
+
+  main > section:nth-child(2) section p {
+    margin-bottom: 8vh;
+  }
+
+  .mega-menu a:hover {
+    background: orange;
+    border-radius: 20px;
+    transition: 0.3s;
+    width: max-content;
+    padding-left: 4px;
+    padding-right: 2px;
+  }
+
+  main > section:nth-child(3) > div > div:nth-child(1) p {
+    font-size: 1em; /* Taille de police augmentée */
+    line-height: 1.2; /* Espacement des lignes pour une meilleure lisibilité */
+  }
+
+  main > section:nth-child(3) > div > div:nth-child(1) h2 {
+    font-size: 1.5em;
+  }
+
+  main section:nth-child(3) > div > div:nth-child(2) img {
+    width: 114%;
+  }
+
+  main section:nth-child(3) {
+    height: 60vh;
+  }
+
+  main section:nth-child(3) div h1 {
+    font-size: 2px;
+  }
+
+  main > section:nth-child(3) > div > div:nth-child(1) h2 {
+    font-size: 15px;
+  }
+
+  main > section:nth-child(3) > div > div:nth-child(1) p {
+    font-size: 10px;
+  }
+
+  #carousselContainer {
+    height: 20vh;
+    width: 32vh;
+  }
+
+  .lvl-0 a {
+    font-size: 0.6em;
+  }
+
+  .lvl-0 h3 {
+    font-size: 0.8em;
+    padding: 0;
+  }
+
+  footer section {
+    margin: 20px;
+  }
+
+  footer > section > div > li > img {
+    width: 16%;
+  }
+  footer > section > div > li > img:first-of-type {
+    width: 12%;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  .lvl-0 {
+    font-size: 1em;
+  }
+
+  main > section:nth-child(1) div {
+    height: 12vh;
+  }
+
+  main section:nth-child(1) section {
+    height: 80vh;
+    justify-content: center;
+  }
+
+  main section:nth-child(1) section div {
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 80%;
+  }
+
+  main section:nth-child(1) section div p {
+    justify-content: center;
+    margin: 0;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  main section:nth-child(1) section div h1 {
+    justify-content: center;
+    font-size: 20px;
+  }
+
+  .mega-menu {
+    height: 9vh;
+  }
+
+  main section:nth-child(1) div p {
+    font-size: 14px;
+  }
+
+  main section:nth-child(1) div h1 {
+    text-align: center;
+  }
+
+  main section:nth-child(2) {
+    height: 100%;
+  }
+
+  main section:nth-child(2) a p {
+    font-size: 0.6em;
+  }
+
+  main section:nth-child(2) a {
+    width: 10%;
+    height: 10vh;
+  }
+
+  main section:nth-child(3) {
+    height: 150%;
+  }
+
+  main section:nth-child(3) p {
+    height: 150%;
+  }
+
+  main section:nth-child(3) > div > div:nth-child(2) img {
+    width: 50%;
+    margin-bottom: 2vh;
+  }
+
+  main section:nth-child(4) h2 {
+    font-size: 1.2em;
+    margin: 1vh;
+  }
+}
+
+@media screen and (max-height: 400px) and (max-width: 700px) {
+  main section:nth-child(1) {
+    height: 80vh;
+  }
+
+  main section:nth-child(1) section {
+    height: 80vh;
+    text-align: center;
+  }
+
+  main section:nth-child(1) div p {
+    font-size: 14px;
+  }
+
+  main section:nth-child(1) section {
+    margin-top: 10vh;
+  }
+
+  main section:nth-child(2) {
+    height: 50vh;
+  }
+
+  main section:nth-child(2) section a p {
+    font-size: 0.1em;
+  }
+
+  main > section:nth-child(2) section div {
+    width: 16vw;
+    height: 10vh;
+    margin-top: 10vh;
+    font-size: 0.7em;
+  }
+
+  main > section:nth-child(2) section p {
+    margin-bottom: 20vh;
+  }
+
+  main > section:nth-child(2) {
+    height: 120vh;
+  }
+
+  main section:nth-child(3) {
+    height: 150%;
+  }
+
+  main section:nth-child(3) > div > div:nth-child(2) img {
+    width: 50%;
+    margin-bottom: 2vh;
+  }
+
+  main > section:nth-child(3) > div > div:nth-child(1) h2 {
+    font-size: 15px;
+  }
+
+  main > section:nth-child(3) > div > div:nth-child(1) p {
+    font-size: 10px;
+  }
+
+  .lvl-0 a {
+    font-size: 0.6em;
+  }
+
+  main section:nth-child(1) div {
+    height: 15vh;
+  }
+
+  .mega-menu {
+    height: 12vh;
+  }
+}

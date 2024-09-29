@@ -1,0 +1,46 @@
+.switch {
+    display: inline-block;
+    position: relative;
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+    overflow: hidden;
+    right: 10px;
+  }
+  .switch input {
+    position: absolute;
+    top: -30px;
+    top: -30px;
+    width: 0;
+    height: 0;
+  }
+  .switch input + span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(https://resize-lejdd.lanmedia.fr/r/375,,forcex/img/var/jdd/public/media/image/2023/05/04/18/union-flag.jpg?VersionId=sZg1jf4RXzsLgT9vnE8FnuTMEzWCd90U);
+    background-size: 100%;
+    border-radius: 20px;
+  }
+  .switch input + span:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    width: 32px;
+    height: 32px;
+    background: rgb(191, 180, 180);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: all 0.5s;
+  }
+  .switch input:checked + span {
+    background-image: url(https://media.istockphoto.com/id/806626836/fr/vectoriel/drapeau-france.jpg?s=612x612&w=0&k=20&c=9au6i1sguZnoHVr6qinZoHJV1t4oKzQkFTi__3U531g=);
+    background-size: 100%;
+  }
+  .switch input:checked + span:before {
+    left: 34px;
+  }

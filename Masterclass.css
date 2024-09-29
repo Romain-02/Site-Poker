@@ -1,0 +1,105 @@
+body{
+  background-color: black;
+}
+
+.cour {
+  margin-top: 55px;
+  border: solid 1px green;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  background-color: rgba(169, 243, 169, 0.763);
+  padding: 10px;
+}
+
+.contiendiv {
+  border: solid 1px;
+  height: fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grandSec {
+  margin: 0;
+  background-image: url("./image/tablePoker2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  background-position: 100%;
+  z-index: -2;
+}
+
+.grandSec::before {
+  background: rgba(255, 0, 0, 0.25);
+  top: 0vh;
+  right: 0;
+  bottom: 0vh;
+  left: 0;
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+
+.courdiff {
+  background-color: rgba(169, 243, 169, 0.763);
+  color: rgb(0, 0, 0);
+  width: fit-content;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+.directdispo {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-left: 2vw;
+  margin-right: auto;
+  text-align: center;
+  background-color: beige;
+  border: solid black;
+  width: fit-content;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 80px;
+}
+
+.directdispo:hover {
+  background-color: red;
+  transition: 0.3s;
+}
+.directdispov2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 2vw;
+  margin-right: auto;
+  text-align: center;
+  background-color: beige;
+  border: solid black;
+  width: fit-content;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.imagegrid {
+  width: 250px;
+  height: 200px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.courdiff2 {
+  background-color: rgba(230, 109, 11, 0.797);
+  color: rgb(0, 0, 0);
+  width: fit-content;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
