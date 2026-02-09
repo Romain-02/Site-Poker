@@ -1,0 +1,10 @@
+ {
+  "title": {
+    "fr": "Site Poker",
+    "en": "Poker Website"
+  },
+  "description": {
+    "fr": "Site web statique d'événementiel autour du poker, réalisé en groupe de 3 durant une SAE de première année de BUT.",
+    "en": "Static event-oriented poker website, created in a group of 3 during a first-year BUT SAE."
+  }
+}
